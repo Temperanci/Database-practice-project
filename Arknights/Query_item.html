@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Arknights情报站 </title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+</head>
+<body>
+
+
+<form class="layui-form" action="">
+
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo layui-hide-xs layui-bg-black">企鹅物流数据统计</div>
+        <!-- 头部区域（可配合layui 已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <!-- 移动端显示 -->
+            <li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-header-event="menuLeft">
+                <i class="layui-icon layui-icon-spread-left"></i>
+            </li>
+
+            <li class="layui-nav-item layui-hide-xs"><a href="">首页</a></li>
+
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+                <a href="javascript:;">
+                    <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">
+                    tester
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">Your Profile</a></dd>
+                    <dd><a href="">Settings</a></dd>
+                    <dd><a href="">Sign out</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+                <a href="javascript:;">
+                    <i class="layui-icon layui-icon-more-vertical"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;">查询物品掉率</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">按素材</a></dd>
+                        <dd><a href="javascript:;">按作战</a></dd>
+
+
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="javascript:;">单次作战掉落汇报</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">关于本站</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">团队成员</a></dd>
+                        <dd><a href="">内容来源</a></dd>
+                    </dl>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+
+        <div style="padding: 15px;">
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                <legend>欢迎来到企鹅物流数据统计!</legend>
+            </fieldset>
+            <div class="layui-bg-gray" style="padding: 30px;">
+                <div class="layui-row layui-col-space15">
+                    <div class="layui-col-md6">
+                        <div class="layui-card">
+                            <div class="layui-card-header">查询</div>
+                            <div class="layui-card-body">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">指定物品</label>
+                                    <div class="layui-input-block">
+                                        <select name="city" lay-verify="">
+                                            <option value="">请选择一个素材</option>
+                                            <option value="001">源岩</option>
+                                            <option value="002">固源岩</option>
+                                            <option value="003">双酮</option>
+                                            <option value="004">酯原料</option>
+                                            <option value="005">代糖</option>
+                                            <option value="006">异铁碎片</option>
+                                            <option value="007">破损装置</option>
+                                            <option value="008">赤金</option>
+                                            <option value="009">初级作战记录</option>
+                                            <option value="010">聚酸酯</option>
+                                            <option value="011">碳</option>
+                                            <option value="012">技巧概要 · 卷1</option>
+                                            <option value="013">装置</option>
+                                        </select>
+
+                                    </div>
+                                    <br>
+                                    <div align="center"><button type="button" class="layui-btn">查询</button></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+        </div>
+
+
+
+
+
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                <legend>推荐地图</legend>
+            </fieldset>
+
+            <div class="layui-form">
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="150">
+                        <col width="150">
+                        <col width="200">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>地图名</th>
+                        <th>掉落率</th>
+                        <th>记录次数</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1-1</td>
+                        <td>98.2%</td>
+                        <td>78</td>
+
+                    </tr>
+                    <tr>
+                        <td>1-3</td>
+                        <td>76.8%</td>
+                        <td>23</td>
+
+                    </tr>
+                    <tr>
+                        <td>1-8</td>
+                        <td>66.9%</td>
+                        <td>43</td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+    </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        目前绝大部分数据由玩家手动汇报，为了尽量减少谎报、误报对结果的影响，企鹅数据团队会对掉落进行多方位的审查。
+    </div>
+</div>
+<script src="./layui/layui.js"></script>
+<script>
+    //JS
+    layui.use(['element', 'layer', 'util'], function(){
+        var element = layui.element
+            ,layer = layui.layer
+            ,util = layui.util
+            ,$ = layui.$;
+
+        //头部事件
+        util.event('lay-header-event', {
+            //左侧菜单事件
+            menuLeft: function(othis){
+                layer.msg('展开左侧菜单的操作', {icon: 0});
+            }
+            ,menuRight: function(){
+                layer.open({
+                    type: 1
+                    ,content: '<div style="padding: 15px;">处理右侧面板的操作</div>'
+                    ,area: ['260px', '100%']
+                    ,offset: 'rt' //右上角
+                    ,anim: 5
+                    ,shadeClose: true
+                });
+            }
+        });
+
+    });
+</script>
+
+</body>
+</html>
