@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".../layui/css/layui.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Arknights情报站</title>
+</head>
+<body>
+    <div class="a">
+        <div class="b"></div>
+        <div class="c">
+            <div class="d">
+
+                <div class="login-main">
+                    <header class="layui-elip">登录</header>
+                    <form class="layui-form" action="../common/index" method="POST">
+                        <div class="layui-input-inline">
+                            <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off"
+                                   class="e">
+                        </div>
+                        <div class="layui-input-inline">
+                            <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off"
+                                   class="e">
+                        </div>
+                        <div class="layui-input-inline login-btn">
+                            <button lay-submit lay-filter="login" class="f">登录</button>
+                            <button lay-submit lay-filter="submit" class="g">注册</button>
+                        </div>
+                        <hr/>
+
+                    </form>
+                </div>
+
+
+
+</body>
+</html>
+
+
+<script src=".../layui/layui.js"></script>
+<script type="text/javascript">
+    layui.use(['form','layer','jquery'], function () {
+
+        // 操作对象
+        var form = layui.form;
+        var $ = layui.jquery;
+        form.on('submit(login)',function (data) {
+            // console.log(data.field);
+            $.ajax({
+                url:'../common/index',
+                data:data.field,
+                dataType:'text',
+                type:'post',
+                success:function (data) {
+                    if (data == '1'){
+                        location.href = "../main.html";
+                    }if(data=='2'){
+                        //跳转到管理员界面
+                    }
+                    else{
+                        layer.msg('登录名或密码错误');
+                    }
+                }
+            })
+            return false;
+        })
+
+    });
+</script>
+
+
+
+
+
+<style>
+    body{
+        /* 设置背景渐变 */
+        background-image: linear-gradient(to left,
+        #9c88ff,#3cadeb);
+        display: flex;
+        justify-content: center;
+    }
+    .a{
+        position:relative;
+        top: 100px;
+        width: 1100px;
+        height: 550px;
+        box-shadow: 0 5px 15px rgba(0,0,0,.8);
+        display: flex;
+    }
+    .b{
+        width: 800px;
+        height: 550px;
+        background-image: url("login_background.jpg");
+        /* 让图片适应大小 */
+        background-size: cover;
+    }
+    .c{
+        width: 300px;
+        height: 550px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .d{
+        width: 250px;
+        height: 500px;
+    }
+    .d h1{
+        font: 900 30px '';
+    }
+    .e{
+        width: 230px;
+        margin: 20px 0;
+        outline: none;
+        border: 0;
+        padding: 10px;
+        border-bottom: 3px solid rgb(80,80,170);
+        font: 900 16px '';
+    }
+    .f{
+        position: absolute;
+        margin: 20px;
+        bottom: 125px;
+        display: block;
+        width: 200px;
+        height: 60px;
+        font: 900 30px '';
+        text-decoration: none;
+        line-height: 50px;
+        border-radius: 30px;
+        background-image: linear-gradient(to left,
+        #9c88ff,#3cadeb);
+        text-align: center;
+    }
+    .g{
+        position: absolute;
+        margin: 20px;
+        bottom: 40px;
+        display: block;
+        width: 200px;
+        height: 60px;
+        font: 900 30px '';
+        text-decoration: none;
+        line-height: 50px;
+        border-radius: 30px;
+        background-image: linear-gradient(to left,
+        #9c88ff,#3cadeb);
+        text-align: center;
+    }
+</style>
