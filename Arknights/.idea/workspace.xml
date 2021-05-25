@@ -20,30 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b05adb33-5011-4e38-b8fe-4c54c8acf78c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Arknights.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fore_end/Query_item.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fore_end/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fore_end/login/drjm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fore_end/login/login_background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fore_end/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/css/layui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/css/modules/code.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/css/modules/layer/default/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/css/modules/layer/default/layer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/font/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/font/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/font/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/font/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/font/iconfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back_end/Arknights.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back_end/Arknights.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fore_end/src/admin/page/map_admin1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/src/admin/page/map_admin1.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -59,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Back_end/Arknights.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+            <state relative-caret-position="221">
+              <caret line="76" column="37" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -73,7 +52,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Back_end/Arknights.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="15" />
     <option name="y" value="95" />
     <option name="width" value="1770" />
@@ -115,7 +101,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/myFavorite" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/myFavorite-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -183,21 +169,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993395" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49867898" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006605" side_tool="true" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.501321" side_tool="true" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -248,8 +234,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Back_end/Arknights.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+        <state relative-caret-position="221">
+          <caret line="76" column="37" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

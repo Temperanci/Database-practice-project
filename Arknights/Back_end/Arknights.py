@@ -52,6 +52,33 @@ def login_login():
             jsondata = {}
             return jsonify(jsondata)
 
+#用于查询指定素材不同地图掉率 获取的item_num格式应如"1"，"2"...."9"
+@app.route('/Total_map/listmaps', methods=['POST'])
+def maps_list():
+    if request.method == "POST":
+        item_num = request.form.get("item_num")
+
+        cursor.execute("SELECT map_name,prob_item"+str(item_num)+",Count "
+       "FROM total_map WHERE prob_item"+str(item_num)+" is not Null "
+       "ORDER BY prob_item"+str(item_num)+" DESC")
+
+        data = cursor.fetchall()
+        temp={}
+        result=[]
+        if(data!=None):
+            for i in data:
+                temp["map_name"]=i[0]
+                temp["prob_item"]=i[1]
+                temp["Count"]=i[2]
+                result.append(temp.copy()) #特别注意要用copy，否则只是内存的引用
+            print("result:",len(data))
+            return jsonify(result)
+        else:
+            print("result: NULL wrong")
+            return jsonify([])
+
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8879)
     db.close()
