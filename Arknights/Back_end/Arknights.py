@@ -52,7 +52,7 @@ def login_login():
             jsondata = {}
             return jsonify(jsondata)
 
-#用于查询指定素材不同地图掉率 获取的item_num格式应如"1"，"2"...."9"
+#用于查询指定素材不同地图掉率 获取的item_num格式应如"1"，"2"...."13"
 @app.route('/Total_map/listmaps', methods=['POST'])
 def maps_list():
     if request.method == "POST":
@@ -77,7 +77,40 @@ def maps_list():
             print("result: NULL wrong")
             return jsonify([])
 
+#用于查询地图不同素材掉率 获取的map_num格式应如"1"，"2"...."9"
+@app.route('/Total_map/listItems', methods=['POST'])
+def items_list():
+    if request.method == "POST":
+        map_num = request.form.get("map_num")
+        cursor.execute("SELECT * FROM total_map "
+                       "WHERE map_name='1_"+str(map_num)+"'")
 
+        data = cursor.fetchall()
+        temp={}
+        result=[]
+        if(data!=None):
+            for i in data:
+                temp["map_name"]=i[0]
+                temp["prob_item1"]=i[1]
+                temp["prob_item2"] = i[2]
+                temp["prob_item3"] = i[3]
+                temp["prob_item4"] = i[4]
+                temp["prob_item5"] = i[5]
+                temp["prob_item6"] = i[6]
+                temp["prob_item7"] = i[7]
+                temp["prob_item8"] = i[8]
+                temp["prob_item9"] = i[9]
+                temp["prob_item10"] = i[10]
+                temp["prob_item11"] = i[11]
+                temp["prob_item12"] = i[12]
+                temp["prob_item13"] = i[13]
+                temp["Count"]=i[14]
+                result.append(temp.copy()) #特别注意要用copy，否则只是内存的引用
+            print("result:",len(data))
+            return jsonify(result)
+        else:
+            print("result: NULL wrong")
+            return jsonify([])
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8879)
