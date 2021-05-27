@@ -1,6 +1,6 @@
 <template>
     <div class="login-wrap">
-        <div class="ms-title" style="font-size: 30px">我的收藏夹<span style="font-size: 10px; margin-left: 73px;">
+        <div class="ms-title" style="font-size: 30px">主页maybe<span style="font-size: 10px; margin-left: 73px;">
             <u></u></span>
         </div>
         <div class="tab">

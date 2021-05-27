@@ -112,6 +112,48 @@ def items_list():
             print("result: NULL wrong")
             return jsonify([])
 
+
+#用于向指定地图中新增一条作战记录汇报 获取的map_num格式应如"1"，"2"...."9"
+#获取的item1格式应为“1”或“0”
+@app.route('/user_map/add', methods=['POST'])
+def record_add():
+    if request.method == "POST":
+        user_id = request.form.get("user_id")
+        map_num = request.form.get("map_num")
+        item1 = request.form.get("item1")
+        item2 = request.form.get("item2")
+        item3 = request.form.get("item3")
+        item4 = request.form.get("item4")
+        item5 = request.form.get("item5")
+        item6 = request.form.get("item6")
+        item7 = request.form.get("item7")
+        item8 = request.form.get("item8")
+        item9 = request.form.get("item9")
+        item10 = request.form.get("item10")
+        item11 = request.form.get("item11")
+        item12 = request.form.get("item12")
+        item13 = request.form.get("item13")
+
+        try:
+            cursor.execute("insert into map1_"+str(map_num)+
+             "(user_id,item_1,item_2,item_3,item_4,item_5,item_6,"
+             "item_7,item_8,item_9,item_10,item_11,item_12,item_13) "
+            "values(\""+str(user_id)+"\","+str(item1)+","+str(item2)+","+
+            str(item3)+","+str(item4)+","+str(item5)+","+str(item6)+","+
+            str(item7)+","+str(item8)+","+str(item9)+","+str(item10)+","+
+            str(item11)+","+str(item12)+","+str(item13)+")")
+            db.commit() #提交，使操作生效
+            print("add a new favorite successfully!")
+            return "1"
+        except Exception as e:
+            print("add a new favorite failed:",e)
+            db.rollback() #发生错误就回滚
+            return "-1"
+
+
+
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8879)
     db.close()
