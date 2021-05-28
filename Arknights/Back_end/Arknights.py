@@ -150,8 +150,27 @@ def record_add():
             db.rollback() #发生错误就回滚
             return "-1"
 
+#自动计算某地图不同物品掉落率，更新totalmap上的一条记录，获取的map_num格式应如"1"，"2"...."9"
+@app.route('/Total_map/update', methods=['POST'])
+def totalmap_update():
+    if request.method == "POST":
+        map_num = request.form.get("map_num")
+        cursor.execute("select count(id) from map1_"+str(map_num))#获取该地图新的记录Count并更新
+        data = cursor.fetchone()
+        item_num=data[0];
+        cursor.execute("UPDATE total_map set Count="+str(item_num)+" WHERE map_name='1_"+str(map_num)+"' ")
+        db.commit()
 
+        #对每个物品，获取新的sum值，统计出新的掉落率
+        for i in range(1,13):
+            cursor.execute("select sum(item_"+str(i)+") from map1_"+str(map_num))
+            data = cursor.fetchone()
+            item_sum=data[0]
+            prob=round(item_sum/item_num,2)
+            cursor.execute("UPDATE total_map set prob_item"+str(i)+"="+str(prob)+" WHERE map_name='1_"+str(map_num)+"' ")
+            db.commit()
 
+    return "0"
 
 
 if __name__ == "__main__":

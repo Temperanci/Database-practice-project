@@ -73,12 +73,22 @@
 
             },
 
+            updatetotalmap(){//把对应地图的totalmap数据更新
+                this.$http.post(main.url+"/Total_map/update",
+                    {'map_num': localStorage.getItem('map_num')},
+                    {
+                        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+                        emulateJSON: true
+                    }).then(
+                    success=>{
+                        this.data=success.data;
 
+                    }
+                );
+            },
 
             addnew(form,checkboxGroup1){ //添加新纪录
 
-
-                alert(this.form.type);
                 var isChecked=new Array(13)//定义数组存储checkbox是否选中
                 for(var a=0;a<13;a++)
                     isChecked[a]=0;
@@ -94,6 +104,7 @@
 
 
                 else{
+                    localStorage.setItem('map_num',this.form.type);
                     this.$http.post(main.url+"/user_map/add",
                         {
                             'user_id': localStorage.getItem('id'),
@@ -117,17 +128,20 @@
                             emulateJSON: true
                         }).then(
                         success => {
-                            this.$message({type: 'success', message: '上传作战记录成功'});
+                            this.$message({type: 'success', message: '上传作战记录成功，情报已更新'});
                             this.form = {
 
                                 type:''
                             };
                             this.init();
+                            this.updatetotalmap();
+
                         }
                     );
-                    this.dialogFormVisibleed1 = false;
+
                 }
             },
+
 
         }
     }
