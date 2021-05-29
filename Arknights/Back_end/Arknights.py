@@ -52,6 +52,75 @@ def login_login():
             jsondata = {}
             return jsonify(jsondata)
 
+#用于用户更改密码
+@app.route('/login/update', methods=['POST'])
+def login_update():
+    if request.method == "POST":
+        id = request.form.get("id")
+        password = request.form.get("password")
+        try:
+            cursor.execute("update login set password=\"" + str(password)
+                           + "\" where id=" + str(id))
+            db.commit()
+            print("update password successfully!")
+            return "1"
+        except Exception as e:
+            print("update password failed:", e)
+            db.rollback()  # 发生错误就回滚
+            return "-1"
+#列出用户信息
+@app.route('/login/list', methods=['POST'])
+def login_list():
+    if request.method == "POST":
+        cursor.execute("select id,username,role,ctime from login")
+        data = cursor.fetchall()
+        temp={}
+        result=[]
+        if(data!=None):
+            for i in data:
+                temp["id"]=i[0]
+                temp["username"]=i[1]
+                temp["role"]=i[2]
+                temp["ctime"]=i[3]
+                result.append(temp.copy()) #特别注意要用copy，否则只是内存的引用
+            print("result:",len(data))
+            return jsonify(result)
+        else:
+            print("result: NULL")
+            return jsonify([])
+
+#改变用户角色
+@app.route('/login/update_role', methods=['POST'])
+def login_update_role():
+    if request.method == "POST":
+        id = request.form.get("id")
+        role = request.form.get("role")
+        try:
+            cursor.execute("update login set role=\""+str(role)
+                            +"\" where id="+str(id))
+            db.commit()
+            print("update role successfully!")
+            return "1"
+        except Exception as e:
+            print("update role failed:",e)
+            db.rollback() #发生错误就回滚
+            return "-1"
+#删除一个用户
+@app.route('/login/del', methods=['POST'])
+def login_del():
+    if request.method == "POST":
+        id = request.form.get("id")
+        try:
+            cursor.execute("delete from login where id="+str(id))
+            db.commit()
+            print("delete user"+str(id)+" successfully!")
+            return "1"
+        except Exception as e:
+            print("delete the user failed:",e)
+            db.rollback() #发生错误就回滚
+            return "-1"
+
+
 #用于查询指定素材不同地图掉率 获取的item_num格式应如"1"，"2"...."13"
 @app.route('/Total_map/listmaps', methods=['POST'])
 def maps_list():
@@ -172,6 +241,15 @@ def totalmap_update():
 
     return "0"
 
+#用于获取目前的记录总数
+@app.route('/Total_map/count', methods=['POST'])
+def totalmap_count():
+    if request.method == "POST":
+        cursor.execute("select sum(Count) FROM total_map")#获取总Count
+        data = cursor.fetchone()
+        count=data[0]
+        print(count)
+        return str(count)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8879)

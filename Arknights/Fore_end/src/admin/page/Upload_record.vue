@@ -6,8 +6,11 @@
 
             </el-breadcrumb>
         </div>
+
         <div class="form-box">
-            <el-form :model="form" :rules="rules" ref="form" label-width="150px">
+
+            <el-row><el-col>
+            <el-form :model="form" :rules="rules" ref="form" label-width="80px">
                 <el-form-item label="选择地图" prop="type">
                     <el-select v-model="form.type" placeholder="请选择地图">
                          <el-option
@@ -19,9 +22,16 @@
                     </el-select>
                 </el-form-item>
 
+            </el-form></el-col>
 
-            </el-form>
+        </el-row>
         </div>
+
+
+
+
+
+
 
         <div>
 
@@ -30,6 +40,7 @@
             </el-checkbox-group>
 
         </div>
+
 
 
         <div style="margin-top: 20px">
@@ -146,3 +157,9 @@
         }
     }
 </script>
+<style>
+.a{
+    margin-bottom: 20px;
+
+}
+</style>

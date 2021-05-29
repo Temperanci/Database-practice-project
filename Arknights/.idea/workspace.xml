@@ -20,10 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b05adb33-5011-4e38-b8fe-4c54c8acf78c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back_end/Arknights.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back_end/Arknights.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fore_end/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fore_end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fore_end/src/admin/common/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/src/admin/common/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fore_end/src/admin/common/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/src/admin/common/Sidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fore_end/src/admin/page/Upload_record.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/src/admin/page/Upload_record.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../实现过程and目前进度.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../实现过程and目前进度.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fore_end/src/admin/page/account_admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/src/admin/page/account_admin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fore_end/src/admin/page/map_admin1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/src/admin/page/map_admin1.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fore_end/src/admin/page/map_admin2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/src/admin/page/map_admin2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fore_end/src/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/src/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fore_end/src/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/src/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fore_end/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fore_end/static/css/theme-green/color-green.css" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/static/css/theme-green/color-green.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fore_end/static/img/img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Fore_end/static/img/img.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Back_end/Arknights.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="161" column="19" lean-forward="true" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
+            <state>
+              <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -51,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Downloads/myFavorite-master/myFavorite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3925">
-              <caret line="159" column="30" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
+            <state relative-caret-position="100">
+              <caret line="33" selection-start-line="33" selection-end-line="49" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -179,7 +189,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
@@ -243,20 +253,20 @@
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1621856198839" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Back_end/Arknights.py">
+    <entry file="file://$USER_HOME$/Downloads/myFavorite-master/myFavorite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="161" column="19" lean-forward="true" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="100">
+          <caret line="33" selection-start-line="33" selection-end-line="49" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/myFavorite-master/myFavorite.py">
+    <entry file="file://$PROJECT_DIR$/Back_end/Arknights.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3925">
-          <caret line="159" column="30" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
+        <state>
+          <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

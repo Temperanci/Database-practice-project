@@ -7,7 +7,7 @@
             </el-breadcrumb>
         </div>
         <div>
-            <el-table :data="data" border style="width: 90%" ref="multipleTable" >
+            <el-table :data="data" border style="width: 75%" ref="multipleTable" >
                 <el-table-column label="ID" prop="id" width="80px" ></el-table-column>
                 <el-table-column label="用户名" prop="username" width="200px" ></el-table-column>
                 <el-table-column label="角色" prop="role" width="150px" ></el-table-column>
@@ -18,7 +18,9 @@
                         <el-button type="text" @click="del_user(scope.row)" >删除</el-button>
                     </template>
                 </el-table-column>
-            </el-table><el-button type="primary" @click="adduser()" align="center">添加账号</el-button>
+
+            </el-table>
+            <br/><el-button type="primary" @click="adduser()" align="center">添加账号</el-button>
             <template>
             </template>
         </div>
@@ -161,14 +163,17 @@
             }
             else if(localStorage.getItem('role')!=1){
                 this.$router.replace('/admin');
+                alert("你不是管理员！")
             }
             else{this.init();}
         },
         methods:{
             init(){
+
                 this.$http.post(main.url+"/login/list").then(
                     success=>{
                         this.data=success.data;
+
                         for(let i=0;i<this.data.length;i++){
                             if(this.data[i].role===0)
                                 this.data[i].role = "普通用户";

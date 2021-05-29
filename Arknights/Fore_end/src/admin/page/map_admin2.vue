@@ -6,8 +6,19 @@
                 <el-breadcrumb-item>按作战</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
+        <el-row class="a">
+            <el-card  shadow="hover">
+                <div slot="header" class="clearfix">
+                    <span>快速上手</span>
+                </div>
+                点击下方按钮，选择你需要的地图查询<br/><br/>
+                企鹅物流将会为您列出该所有素材的掉落率
+            </el-card>
+        </el-row>
+        <el-row >
         <div>
-            <el-table :data="data" border style="width: 100%" ref="multipleTable" >
+            <el-card  shadow="hover">
+            <el-table :data="data"  style="width: 100%" ref="multipleTable" >
                 <el-table-column label="地图名称" prop="map_name" width="100px" ></el-table-column>
                 <el-table-column label="源岩" prop="prob_item1" width="100px" ></el-table-column>
                 <el-table-column label="固源岩" prop="prob_item2" width="100px" ></el-table-column>
@@ -24,9 +35,13 @@
                 <el-table-column label="记录次数" prop="Count" width="200px" ></el-table-column>
 
             </el-table>
+            </el-card>
             <br />
             <el-button type="primary" @click="QueryByMap()" align="center">查询指定地图</el-button>
         </div>
+        </el-row>
+
+
 
         <el-dialog
             width="30%"
@@ -134,3 +149,9 @@ export default {
     }
 }
 </script>
+<style>
+    .a{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+</style>

@@ -6,16 +6,42 @@
                 <el-breadcrumb-item>按素材</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
-        <div>
-            <el-table :data="data" border style="width: 650px" ref="multipleTable" >
-                <el-table-column label="地图名称" prop="map_name" width="250px" ></el-table-column>
-                <el-table-column label="掉落率" prop="prob_item" width="150px" ></el-table-column>
-                <el-table-column label="记录次数" prop="Count" width="250px" ></el-table-column>
+        <el-row :gutter="12">
 
-            </el-table>
-            <br />
-            <el-button type="primary" @click="QueryByItem()" align="center">查询指定素材</el-button>
-        </div>
+            <el-col :span="14">
+                <div>
+                    <el-card  shadow="hover">
+                        <div slot="header" class="clearfix">
+                            <span>推荐地图</span>
+                        </div>
+                    <el-table :data="data"  stripe  style="width:100%" >
+                        <el-table-column label="地图名称" prop="map_name" width="250px" ></el-table-column>
+                        <el-table-column label="掉落率" prop="prob_item" width="150px" ></el-table-column>
+                        <el-table-column label="记录次数" prop="Count" width="230px" ></el-table-column>
+
+                    </el-table>
+                    </el-card>
+                    <br />
+                    <el-button type="primary" @click="QueryByItem()" align="center">查询指定素材</el-button>
+                </div>
+            </el-col>
+            <el-col :span="8" >
+                <el-row :gutter="12">
+                <el-card  shadow="hover">
+                    <div slot="header" class="clearfix">
+                        <span>快速上手</span>
+                    </div>
+                    点击下方按钮，选择你需要的素材查询<br/><br/>
+                    企鹅物流将会为您推荐合适的地图
+                </el-card>
+                </el-row>
+
+            </el-col>
+        </el-row>
+
+
+
+
 
         <el-dialog
             width="30%"
@@ -66,7 +92,9 @@ export default {
                 type:[
                     {required:true,message:'请设置权限',trigger:'blur'}
                 ]
-            }
+            },
+
+
         }
     },
     created(){
@@ -124,3 +152,6 @@ export default {
     }
 }
 </script>
+<style>
+
+</style>

@@ -1,27 +1,27 @@
 .header{
-    background-color: #00d1b2;
+    background-color: #a1c4fd;
 }
 .login-wrap{
-    background: rgba(56, 157, 170, 0.82);;
+    background: #a1c4fd;
 }
 .plugins-tips{
     background: #f2f2f2;
 }
 .plugins-tips a{
-    color: #00d1b2;
+    color: #a1c4fd;
 }
 .el-upload--text em {
-    color: #00d1b2;
+    color: #a1c4fd;
 }
 .pure-button{
-    background: #00d1b2;
+    background: #a1c4fd;
 }
 .vue-datasource .btn-primary {
     color: #fff;
-    background-color: #00d1b2 !important;
-    border-color: #00d1b2 !important;
+    background-color: #a1c4fd !important;
+    border-color: #c2e9fb !important;
 }
 .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
-    background-color: #00d1b2 !important;
-    border-color: #00d1b2 !important;
+    background-color: #a1c4fd !important;
+    border-color: #c2e9fb !important;
 }

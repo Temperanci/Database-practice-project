@@ -1,5 +1,8 @@
 <template>
-    <div class="header">
+
+
+        <div class="header">
+
         <div class="logo">企鹅物流数据统计</div>
         <div class="user-info">
             <el-dropdown trigger="click" @command="handleCommand">
@@ -13,6 +16,7 @@
                 </el-dropdown-menu>
             </el-dropdown>
         </div>
+
         <el-dialog
             width="30%"
             title="修改密码"
@@ -33,6 +37,7 @@
             </div>
         </el-dialog>
     </div>
+
 </template>
 <script>
     import main from "../../main";
@@ -98,11 +103,13 @@
         font-size: 22px;
         line-height: 70px;
         color: #fff;
+        background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
     }
     .header .logo{
         float: left;
         width:250px;
         text-align: center;
+        background-image: url("/static/img/neng.png");
     }
     .user-info {
         float: right;
@@ -129,4 +136,5 @@
     .el-dropdown-menu__item{
         text-align: center;
     }
+
 </style>

@@ -1,22 +1,29 @@
 <template>
-    <div class="login-wrap">
-        <div class="ms-title" style="font-size: 30px">主页maybe<span style="font-size: 10px; margin-left: 73px;">
-            <u></u></span>
+    <div>
+        <div id="app" align="center" class="p">
+            <el-carousel :interval="5000" arrow="always" type="card" height="350px">
+                <el-carousel-item v-for="(img,index) in imgList" :key="index">
+                    <img v-bind:src="img.url">
+                </el-carousel-item>
+            </el-carousel>
         </div>
-        <div class="tab">
-            <el-table :data="data" border ref="multipleTable" >
-                <el-table-column label="网站名称" prop="wname" width="100px" ></el-table-column>
-                <el-table-column label="网站地址" prop="wurl" width="300px" ></el-table-column>
-                <el-table-column label="点击次数" prop="count" width="70px" ></el-table-column>
-                <el-table-column label="创建时间" prop="ctime" width="250px" ></el-table-column>
-                <el-table-column label="操作" width="80px" >
-                    <template slot-scope="scope" width="100px">
-                        <el-button type="text" @click="gotourl(scope.row)" >进入</el-button>
-                    </template>
-                </el-table-column>
-            </el-table>
+        <div align="center" >
+            <el-row >
+            <el-col >
+                <el-card shadow="always">
+                    欢迎来到企鹅物流数据统计！
+                    <div> 当前本站总记录数目：
+                    {{msg}}</div>
+                </el-card>
+            </el-col>
+
+            </el-row>
         </div>
-        <el-button type="primary" @click="submit()" >登录</el-button>
+
+        <div align="center">
+            <el-button type="primary" @click="submit()" >请登录</el-button>
+        </div>
+
     </div>
 </template>
 
@@ -25,8 +32,14 @@
     export default {
         data: function(){
             return {
+                msg:localStorage.getItem('count'),
                 dialogVisible:false,
-                data:[]
+                data:[],
+                imgList:[
+                    {url:require('./assets/qiewuliu.jpg')},
+                    {url:require('./assets/chen.jpg')},
+                    {url:require('./assets/yinhui.jpg')}
+                ]
             }
         },
         created(){
@@ -34,30 +47,19 @@
         },
         methods: {
             init(){
-                this.$http.post(main.url+"/favorite/list",
-                    {'uid': 0},
+                this.$http.post(main.url+"/Total_map/count",
+                    {},
                     {
                         headers: {'Content-Type':'application/x-www-form-urlencoded'},
                         emulateJSON: true
                     }).then(
                     success=>{
                         this.data=success.data;
+                       localStorage.setItem('count',this.data)
                     }
                 );
             },
-            gotourl(row){ //进入指定的网站
-                this.$http.post(main.url+"/favorite/count",
-                    {'id': row.id},
-                    {
-                        headers: {'Content-Type':'application/x-www-form-urlencoded'},
-                        emulateJSON: true
-                    }).then(
-                    success=> {
-                        window.open(row.wurl, "_blank");
-                        this.init();
-                    }
-                )
-            },
+
             submit(){
                 this.$router.push({ path: '/login' });
             }
@@ -66,34 +68,60 @@
 </script>
 
 <style scoped>
-    .tab{
-        position: absolute;
-        top: 20%;
-        left: 25%;
-        width: 805px;
-        height: 100%;
+
+    body{
+    /* 设置背景渐变 */
+    background-image: linear-gradient(to left,
+    #FAACA8,#3cadeb);
+    display: flex;
+    justify-content: center;
     }
-    .login-wrap{
-        position: relative;
-        background: url("/static/img/bg.jpg") no-repeat center;
-        width:100%;
-        height:100%;
-    }
-    .ms-title{
-        position: absolute;
-        top: 40%;
-        width: 100%;
-        margin-top: -230px;
-        text-align: center;
-        font-size: 14px;
-        color: #fff;
-        font-weight: bold;
-    }
+
+
     .login-btn button{
         position: absolute;
-        width: 40%;
-        height: 35px;
+        width: 50%;
+        height: 50px;
         right: 10%;
-        top: 10%;
+        top: 20%;
+
+    }
+    .p{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .el-carousel__item h3 {
+        width: 60%;
+        color: #475669;
+        font-size: 18px;
+        opacity: 0.75;
+        line-height: 300px;
+        margin: 0;
+    }
+
+    .el-carousel__item:nth-child(2n) {
+        background-color: #99a9bf;
+        width: 60%;
+    }
+
+    .el-carousel__item:nth-child(2n+1) {
+        background-color: #d3dce6;
+        width: 60%;
+
+    }
+
+    .el-card{
+        border-radius: 10px;
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+
+    }
+    .el-button{
+        background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+        margin-top: 60px;
+        width: 200px;
+        border:none
     }
 </style>

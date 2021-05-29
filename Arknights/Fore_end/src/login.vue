@@ -81,6 +81,7 @@
                                 localStorage.setItem('username',this.ruleForm.username);
                                 localStorage.setItem('role',success.data.role);
                                 localStorage.setItem('id',success.data.id);
+
                                 this.$router.push({ path: '/admin' });
                                 this.ruleForm.username='';
                             }else{
@@ -128,17 +129,12 @@
 body{
     /* 设置背景渐变 */
     background-image: linear-gradient(to left,
-    #9c88ff,#3cadeb);
+    #FAACA8,#3cadeb);
     display: flex;
     justify-content: center;
 }
-/*
-    .login-wrap{
-        position: relative;
-        background: url("/static/img/bg.jpg") no-repeat center;
-        width:100%;
-        height:100%;
-    }*/
+
+
     .bg{
     width: 800px;
     height: 550px;
